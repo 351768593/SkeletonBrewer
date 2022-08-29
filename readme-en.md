@@ -16,7 +16,7 @@ and used for generating singleton code.
 
 ## Usage
 
-* Download pre-built .jar from [GitHub releases](),
+* Download pre-built .jar from [GitHub releases](https://github.com/351768593/SkeletonBrewer/releases),
   or you could build and install via `mvn install` by yourself after cloning repo
 * Import Skeleton Brewer as dependency
 * Create a file named `javax.annotation.processing.Processor` in directory `META-INF/services/`

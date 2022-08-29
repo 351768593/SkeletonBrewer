@@ -15,7 +15,7 @@
 
 ## 使用方式
 
-* 从 [GitHub releases]() 下载编译好的 .jar,
+* 从 [GitHub releases](https://github.com/351768593/SkeletonBrewer/releases) 下载编译好的 .jar,
   或 clone repo 后自行执行 `mvn install` 构建安装依赖
 * 在项目中引入 Skeleton Brewer 依赖
 * 在 `META-INF/services/` 目录下建立文件 `javax.annotation.processing.Processor`
