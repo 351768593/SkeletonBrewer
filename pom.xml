@@ -6,7 +6,7 @@
 
     <groupId>firok</groupId>
     <artifactId>skeletonbrewer</artifactId>
-    <version>17.0.0</version>
+    <version>17.0.1</version>
 
     <properties>
         <java.version>17</java.version>

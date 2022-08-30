@@ -26,6 +26,7 @@ and used for generating singleton code.
   ```
 * Enable APT in your develop environment
 * Create classes marked with `@Skeleton`
+  * those classes should have a constructor with **NO ARGS**
 * Re-build and start project
 
 > This tool depends on [Topaz lib](https://github.com/351768593/Topaz) \[3.8.0, \)

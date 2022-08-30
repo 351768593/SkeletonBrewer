@@ -75,13 +75,13 @@ public class SkeletonProcessor extends AbstractProcessor
 		if(setAnno.isEmpty()) return true;
 
 		setAnno.stream().parallel().forEach(ele -> {
-			if(ele instanceof TypeElement eleBean)
+			if(ele instanceof TypeElement eleSkeleton)
 			{
 				Skeleton anno;
-				synchronized (LOCK_REFLECT_API) { anno = eleBean.getAnnotation(Skeleton.class); }
+				synchronized (LOCK_REFLECT_API) { anno = eleSkeleton.getAnnotation(Skeleton.class); }
 
-				final var skeletonFullName = eleBean.getQualifiedName().toString(); // a.b.c.d.E
-				final var skeletonName = eleBean.getSimpleName().toString(); // E
+				final var skeletonFullName = eleSkeleton.getQualifiedName().toString(); // a.b.c.d.E
+				final var skeletonName = eleSkeleton.getSimpleName().toString(); // E
 				final var skeletonPackage = skeletonFullName.substring(0, skeletonFullName.lastIndexOf('.')); // a.b.c.d;
 
 				final var keeperFullNameRaw = anno.at();
@@ -124,6 +124,7 @@ public class SkeletonProcessor extends AbstractProcessor
 					var content = generate(template, map);
 
 					writer.write(content);
+					writer.flush();
 				}
 				catch (Exception any)
 				{
